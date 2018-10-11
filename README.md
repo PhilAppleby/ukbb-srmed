@@ -5,7 +5,7 @@ Code to match UK biobank (UKBB) Self-Reported Medication (SRMed) descriptions wi
 The objective is to provide the means to classify UKBB Self-Reported medication data into related therapy groups for the purpose of enabling additional evidence from UKBB phenotype data to be collected when deriving both individual clinical phenotypes (for example, Asthma, Neuropathic Pain, T2 Diabetes) and when generating a range of phenotypes for Phenome Wide Association Studies (PhewAS). 
 
 ## Description
-Matching code is written in Python 2 (2.7 was used for development). Extensive use of Bash shell wrappers is made to supply context:- Data directory locations, data file names and database access parameters.
+Matching code is written in Python 2 (2.7 was used for development). Extensive use of Bash shell wrappers is made to supply context:- Data directory locations, data file names and database access parameters. All code is intended to be run from a Linix / Unix command line.
 
 ### Subdirectories:
 
