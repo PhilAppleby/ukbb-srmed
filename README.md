@@ -36,13 +36,13 @@ All code is intended to be run from a Linix / Unix command line. The following s
 
 ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_23/chembl_23_sqlite.tar.gz this is no longer the latest version at the time of writing. Downloads for other DBMS's are available.
 
-- *py/* Python scripts, scripts to match synonyms prior to matching across coding systems. Also included is the module 'datahelper.py' which is where the text matching code is to be found.
+- *py/* Python scripts, scripts to match synonyms prior to matching across coding systems. Also included is the module 'datahelper.py' which is where the text matching code is to be found. There are two lower level directories where scripts to extract and format ChEMBL data and to process phenotype data reaide.
 
 - *sh* Bash shell scripts, wrappers for the python code split into several main functions and provided for coding against the ATC and BNF classification systems.
 
 Top-level scripts are prefixed '01_', '02_' and '03_' for each classification system and call several lower level bash scripts. The '03_' scripts are for code assignment to data for individual medication reports in UKBB, the path and filename for UKBB phenotype data for a project must be supplied vis the sourced 'common' environment parameter file.
 
-- *data/* Generated match data for both ATC and BNF coding, this does not include manually assigned coding. The excluded words list can also be found here.
+- *data/* Generated match data for both ATC and BNF coding, this does not include manually assigned coding. The excluded words list, which probably should bbe an independent text file is embedded in ../py/datahelper.py.
 
 ## Running
 Once the environment has been set up (see *env* above), three scripts are run without parameters for either ATC code or BNF code assignment.
