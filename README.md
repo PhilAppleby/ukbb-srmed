@@ -34,9 +34,7 @@ All code is intended to be run from a Linix / Unix command line.
 
 The following subdirectories can be found in the repository:
 
-- *env/* Environment variables used are shown in a single file 'common_tplt', users should complete these and copy to a file named 'common', users must also pre-define the **PROJDATA** and **PROJROOT** environment variables as these are used as roots to data and code directory trees. Parameters for local chembl database access are also required for drug synonym extraction and ATC code extraction. The code example supplied is for the sqlite version 23 of the chembl database which can be found at: 
-
-[ChEMBL database, sqlite version 23](ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_23/chembl_23_sqlite.tar.gz), this is no longer the latest version at the time of writing. Downloads for other DBMS's are available.
+- *env/* Environment variables used are shown in a single file 'common_tplt', users should complete these and copy to a file named 'common', users must also pre-define the **PROJDATA** and **PROJROOT** environment variables as these are used as roots to data and code directory trees. Parameters for local chembl database access are also required for drug synonym extraction and ATC code extraction. The code example supplied is for the sqlite version 23 of the chembl database which can be found at: [ChEMBL database] (ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_23/chembl_23_sqlite.tar.gz "ChEMBL downloads, version 23"), this is no longer the latest version at the time of writing. Downloads for other DBMS's are available.
 
 - *py/* Python scripts, scripts to match synonyms prior to matching across coding systems. Also included is the module 'datahelper.py' which is where the text matching code is to be found. There are two lower level directories where scripts to extract and format ChEMBL data and to process phenotype data reaide.
 
