@@ -30,7 +30,9 @@ The key features to note are;
 
 - During testing an excluded word list was built (cf. stop words from NLP) from examining unwanted one-word matches as part of an iterative process. 
 
-All code is intended to be run from a Linix / Unix command line. The following subdirectories can be found in the repository:
+All code is intended to be run from a Linix / Unix command line. 
+
+The following subdirectories can be found in the repository:
 
 - *env/* Environment variables used are shown in a single file 'common_tplt', users should complete these and copy to a file named 'common', users must also pre-define the **PROJDATA** and **PROJROOT** environment variables as these are used as roots to data and code directory trees. Parameters for local chembl database access are also required for drug synonym extraction and ATC code extraction. The code example supplied is for the sqlite version 23 of the chembl database which can be found at: 
 
@@ -38,20 +40,20 @@ ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_23/chembl_23_s
 
 - *py/* Python scripts, scripts to match synonyms prior to matching across coding systems. Also included is the module 'datahelper.py' which is where the text matching code is to be found. There are two lower level directories where scripts to extract and format ChEMBL data and to process phenotype data reaide.
 
-- *sh* Bash shell scripts, wrappers for the python code split into several main functions and provided for coding against the ATC and BNF classification systems.
+- *sh/* Bash shell scripts, wrappers for the python code split into several main functions and provided for coding against the ATC and BNF classification systems.
 
 Top-level scripts are prefixed '01_', '02_' and '03_' for each classification system and call several lower level bash scripts. The '03_' scripts are for code assignment to data for individual medication reports in UKBB, the path and filename for UKBB phenotype data for a project must be supplied vis the sourced 'common' environment parameter file.
 
-- *data/* Generated match data for both ATC and BNF coding, this does not include manually assigned coding. The excluded words list, which probably should bbe an independent text file is embedded in ../py/datahelper.py.
+- *data/* Generated match data for both ATC and BNF coding, this does not include manually assigned coding. The excluded words list, which probably should be an independent text file is embedded in ../py/datahelper.py and can be extracted using the .../*py*/list_excl_words.py script. 
 
 ## Running
-Once the environment has been set up (see *env* above), three scripts are run without parameters for either ATC code or BNF code assignment.
+Once the environment has been set up (see the note on the .../*env*/common file above), three scripts are run without parameters for either ATC or BNF code assignment.
 
 Script '01' runs data preparation steps, note that raw BNF data is not supplied in this repository due to potential licensing requirements. At this point ChEMBL synonyms and, in the case of the ATC-based match, ATC codes and terms are extracted from the ChEMBL database
 
 Script '02' runs matching scripts to 'merge' in ChEMBL synonym data and produce data on matched and unmatched UKBB medication codes.
 
-Script '03' calls scripts to extract medication detail data from the main UKBB phenotype csv file (the name of this varies by project and should be assigned in the .../env/common file via an environment variable) and then to assign the ATC or BNF codes output in step 02.
+Script '03' calls scripts to extract medication detail data from the main UKBB phenotype csv file (the name of this varies by project and should be assigned in the .../*env*/common file via an environment variable) and then to assign the ATC or BNF codes output in step 02.
 
 For ATC-based matching run:
 - 01_atc_prepare_sqlite.sh
