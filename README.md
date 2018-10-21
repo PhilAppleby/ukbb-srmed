@@ -58,7 +58,7 @@ For ATC-based matching run:
 - 02_atc_match.sh
 - 03_get_ukbb_srmed_data_atc.sh
 
-For ATC-based matching run:
+For BNF-based matching run:
 - 01_bnf_prepare_sqlite.sh
 - 02_bnf_match.sh
 - 03_get_ukbb_srmed_data_bnf.sh
