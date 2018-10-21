@@ -54,7 +54,6 @@ class Datahelper:
       'cream': 1,
       'need': 1,
       'needs': 1,
-#      'aloe': 1,
       'vera': 1,
       'infusion': 1,
       'succinate': 1,
@@ -255,16 +254,6 @@ class Datahelper:
       'magnesium': 1,
       'breathe': 1,
       'wound': 1,
-#      'betamethasone': 1,
-#      'dexamethasone': 1,
-#      'hydrocortisone': 1,
-#      'triamcinolone': 1,
-#      'prednisolone': 1,
-#      'chloromycetin': 1,
-#      'chlorhexidine': 1,
-#      'canesten': 1,
-#      'anusol': 1,
-#      'nystatin': 1,
       'citrate': 1,
       'sulfate': 1,
       'calmurid': 1,
@@ -374,7 +363,6 @@ class Datahelper:
       attempted_matches.append(phrase + ':' + step)
       if phrase in self.cls_phrases:
         match_choices = self.cls_phrases[phrase]
-        #return match_choices, attempted_matches, phrase
         return (self.get_list_counts(match_choices), attempted_matches, 
           phrase, self.get_most_common(match_choices))
 
@@ -406,10 +394,8 @@ class Datahelper:
     # 1 all valid words 
     step = "1"
     for phr_elem in phrases:
-      #print phr_elem.split()
       for phrase in [w.strip() for w in phr_elem.split() 
           if self.isExcluded(w.strip()) == False and w.strip() not in phrase_attempts]:
-        #print "***", phrase
         phrase_attempts[phrase] = 1
         attempted_matches.append(phrase + ':' + step)
         if phrase in self.cls_phrases:
@@ -447,12 +433,10 @@ class Datahelper:
   def get_key_list(self, phrase):
     key_list = []
     if self.isExcluded(phrase) == False:
-      #print "KEY (1) %s" % (phrase)
       key_list = [phrase]
 
     ngram = self.get_normalised_phrase(phrase)
     if self.isExcluded(ngram) == False and ngram not in key_list:
-      #print "KEY (2) %s" % (ngram)
       key_list.append(ngram)
     word_list = ngram.split()
     if len(word_list) > 2:
@@ -462,8 +446,6 @@ class Datahelper:
 
     for word in [x for x in word_list if self.isExcluded(x.strip()) == False]:
       if word not in key_list:
-        #print "KEY (3) %s" % (word)
-        #print word
         key_list.append(word)
 
     return key_list
@@ -474,12 +456,10 @@ class Datahelper:
     """
     key_list = []
     if self.isExcludedFromMerge(phrase) == False:
-      #print "KEY (1) %s" % (phrase)
       key_list = [phrase]
 
     ngram = self.get_normalised_phrase(phrase)
     if self.isExcluded(ngram) == False and ngram not in key_list:
-      #print "KEY (2) %s" % (ngram)
       key_list.append(ngram)
     word_list = ngram.split()
     if len(word_list) > 2:
@@ -489,8 +469,6 @@ class Datahelper:
 
     for word in [x for x in word_list if self.isExcludedFromMerge(x.strip()) == False]:
       if word not in key_list:
-        #print "KEY (3) %s" % (word)
-        #print word
         key_list.append(word)
 
     return key_list
@@ -509,7 +487,6 @@ class Datahelper:
     """
     Used in the main match
     """
-    #print word
     return ((self.isExcludedWord(word) != False) 
         or (self.isMeasure(word) != False) 
         or (self.isAllDigits(word) != False) 
@@ -520,7 +497,6 @@ class Datahelper:
     Used when buliding dictionaries for use in 
     synonym merging
     """
-    #print word
     return ((self.isExcludedWord(word) != False) 
         or (self.isMeasure(word) != False) 
         or (self.isShortWord(word) != False))
@@ -537,9 +513,6 @@ class Datahelper:
     """
     data = Counter(lst)
     mc = data.most_common(2) 
-    #if len(mc) == 1 or (mc[0][1] != (mc[1][1])):
-    #  return mc[0][0]
-    #return "AMB"
     return data.most_common(1)[0][0]
 
   def get_list_counts(self, lst):
@@ -551,12 +524,12 @@ class Datahelper:
 
   def get_best_guess(self, lst):
     """
+    NOT USED
     Return the best guess at a value from 
     a list of strings
     """
     maxlen = 0
     pass
-    #for elem in lst:
 
   def make_pheno_string(self, words):
   	return re.sub(r' +', '_', words).lower()

@@ -1,16 +1,18 @@
-export UKBBDATADIR=<PATH to main UKBB data files>
+export UKBBDATADIR=<PATH to main project-dependent UKBB data files>
 export ATCDATADIR=${PROJDATA}/atc
 export BNFDATADIR=${PROJDATA}/bnf
 export BNFCODEDIR=${PROJDATA}/GoDARTS2/lookups
 export UKBPDIR=${PROJDATA}/ukb_pheno
-export UKBBPHENOFILE=<UKBB project-dependent phentype file name>
+export UKBBPHENOFILE=<project-dependent UKBB phenotype file name, of the form ukbnnnnnnn.csv>
 export UDATADIR=${PROJDATA}/ukb
 export CDATADIR=${PROJDATA}/chembl
 export PYDIR=${UKBPROJROOT}/py
 export PYTHONPATH=${PYDIR}:${PYTHONPATH}
 export SHDIR=${UKBPROJROOT}/sh
 export LOCBINDIR=${HOME}/local/bin
+# Note that this is for sqlite3 access to ChEMBL data
 export CHFILE=${PROJDATA}/chembl_23/chembl_23.db
+# Fill in the following if using MySQL (other DBMS's may require diffreent parameters)
 export CHHOST=
 export CHPORT=
 export CHDB=chembldb23
