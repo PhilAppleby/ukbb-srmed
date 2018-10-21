@@ -1,5 +1,6 @@
 # 
 # Attempt to match CHEMBL synonyms with coding data
+# Produce output with attached synonyms, where possible
 # 
 import time
 import datetime
@@ -23,8 +24,6 @@ def load_synonyms(fh):
     data = line.strip().split('\t')
     syns1 = data[1].split('|')
     syns = [x.strip() for x in syns1]
-    #if data[0] not in synonyms: 
-    #  synonyms[data[0]] = []
     for syn in syns:
       if syn not in synonyms: 
         synonyms[syn] = []

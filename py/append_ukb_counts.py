@@ -1,4 +1,6 @@
 # 
+# Append UKBB self-report report counts to a file
+# with bnf description as col 2
 # 
 import time
 import datetime
@@ -44,9 +46,8 @@ def main(options):
     if data[1] in ukbb_counts:
       count = ukbb_counts[data[1]]
     data.append(count)
-    #if int(count) > 10:
-    #  print ','.join(data)
     print ','.join(data)
+
 # execution flow starts here
 #
 start_time = time.time()
