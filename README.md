@@ -26,11 +26,11 @@ The key features to note are;
 
 - Matching is performed using combinations of whole words only (no partial word matches).
 
-- Synonyms from the ChEMBL database are attached to both 'sides' of the term match as part of data preparation.
+- Synonyms from the ChEMBL database are attached to both 'sides' of the main medication term match, as part of data preparation.
 
-- During testing an excluded word list was built (cf. stop words from NLP), to prevent the software from making unwanted one-word matches, as part of an iterative process. 
+- During testing an excluded word list was built (cf. stop words from Natural Language Processing) to prevent the software from making unwanted one-word matches, as part of an iterative process. 
 
-All code is intended to be run from a Linix / Unix command line. 
+- All code is intended to be run from a Linix / Unix command line. 
 
 The following subdirectories can be found in the repository:
 
