@@ -63,5 +63,5 @@ For BNF-based matching run:
 - 02_bnf_match.sh
 - 03_get_ukbb_srmed_data_bnf.sh
 
-## Flow Summary
+## Flow Summary, steps 01 and 02
 ![](images/ukbb_srmed.png)
