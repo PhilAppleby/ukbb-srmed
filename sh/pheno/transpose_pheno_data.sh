@@ -1,5 +1,5 @@
 #!/bin/sh
-source ${UKBPROJROOT}/env/common
+#source ${UKBPROJROOT}/env/common
 # Take a multi column file extraced for a phenotype from 
 # the main UKB csv file and output one record per participant
 # per phenotype code

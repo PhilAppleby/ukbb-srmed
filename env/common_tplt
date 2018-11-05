@@ -12,7 +12,7 @@ export SHDIR=${UKBPROJROOT}/sh
 export LOCBINDIR=${HOME}/local/bin
 # Note that this is for sqlite3 access to ChEMBL data
 export CHFILE=${PROJDATA}/chembl_23/chembl_23.db
-# Fill in the following if using MySQL (other DBMS's may require diffreent parameters)
+# Fill in the following if using MySQL (other DBMS's may require different parameters)
 export CHHOST=
 export CHPORT=
 export CHDB=chembldb23
