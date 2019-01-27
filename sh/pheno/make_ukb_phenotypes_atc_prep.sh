@@ -7,10 +7,11 @@ source ${UKBPROJROOT}/env/common
 # assigned codes
 #
 # Just get the matches from the manually edited file
-egrep -vw "UKBB_code|NA" ${ATCDATADIR}/results/atc_all_manual_matches.csv > \
-  ${ATCDATADIR}/results/atc_manual_matches.csv
+cp -f  ${ATCDATADIR}/results/atc_manual_matches.csv ${ATCDATADIR}/results/atc_manual_matches.csa.BAKv
+egrep -vw "UKBB_code|NA" ${ATCDATADIR}/results/atc_manual_matches.csv > \
+  ${ATCDATADIR}/results/atc_manual_matches_detail.csv
 # Cut relevant columns
-cut -f 1,2,5 -d ',' ${ATCDATADIR}/results/atc_manual_matches.csv > \
+cut -f 1,2,5 -d ',' ${ATCDATADIR}/results/atc_manual_matches_detail.csv > \
   ${ATCDATADIR}/results/atc_manual_matches_cut.csv
 cut -f 1,2,6 -d ',' ${ATCDATADIR}/results/atc_matched.csv > \
   ${ATCDATADIR}/results/atc_auto_matches_cut.csv
