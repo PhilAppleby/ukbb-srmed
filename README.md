@@ -67,4 +67,5 @@ For BNF-based matching run:
 - 03_get_ukbb_srmed_data_bnf.sh
 - 04_make_bnf_phewas_phenotypes.sh
 
-## Flow Summary
+## Flow Summary, steps 01 and 02
+![](images/ukbb_srmed.png)
