@@ -9,6 +9,7 @@ if [[ $# -ne 2 ]] ; then
     echo 'must supply arg1, arg2 only (descriptive name and column prefix)'
     exit 1
 fi
+echo "Transp: write to ${UKBPDIR}"
 
 cat  ${UKBPDIR}/ukb_${2}_${1}.csv | \
   python ${PYDIR}/pheno/transpose_pheno_data.py > ${UKBPDIR}/ukb_${2}_${1}_n.csv

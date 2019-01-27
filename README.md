@@ -45,7 +45,7 @@ Top-level scripts are prefixed '01_', '02_' and '03_' for each classification sy
 - *data/* Generated match data for both ATC and BNF coding, this does not include manually assigned coding. The excluded words list, which probably should be an independent text file is embedded in ../py/datahelper.py and can be extracted using the .../*py*/list_excl_words.py script. 
 
 ## Running
-Once the environment has been set up (see the note on the .../*env*/common file above), three scripts are run without parameters for either ATC or BNF code assignment.
+Once the environment has been set up (see the note on the .../*env*/common file above), three scripts are run without parameters for either ATC or BNF code assignment through to phenotype genetation (0,1) for PheWAS.
 
 Script '01' runs data preparation steps, note that raw BNF data is not supplied in this repository due to potential licensing requirements. At this point ChEMBL synonyms and, in the case of the ATC-based match, ATC codes and terms are extracted from the ChEMBL database
 
@@ -53,14 +53,18 @@ Script '02' runs matching scripts to 'merge' in ChEMBL synonym data and produce 
 
 Script '03' calls scripts to extract medication detail data from the main UKBB phenotype csv file (the name of this varies by project and should be assigned in the .../*env*/common file via an environment variable) and then to assign the ATC or BNF codes output in step 02.
 
+Script '04' calls scripts to annotate and generate PheWAS phenotypes as binary 1 (CASE) or 0 (CONTROL)
+
 For ATC-based matching run:
 - 01_atc_prepare_sqlite.sh
 - 02_atc_match.sh
 - 03_get_ukbb_srmed_data_atc.sh
+- 04_make_atc_phewas_phenotypes.sh
 
 For BNF-based matching run:
 - 01_bnf_prepare_sqlite.sh
 - 02_bnf_match.sh
 - 03_get_ukbb_srmed_data_bnf.sh
+- 04_make_bnf_phewas_phenotypes.sh
 
 ## Flow Summary

@@ -18,6 +18,7 @@ sys.stdout.flush()
 def main(options):
   csvreader = None
   count=0
+  idcol = int(options.idcol)
 
   try:
     csvfile =  open(options.csvfile, "r")
@@ -40,8 +41,8 @@ def main(options):
   try:
     hdr = csvreader.next()
     #print len(hdr)
-    outhdr.append(hdr[0])
-    cols.append(0)
+    outhdr.append(hdr[idcol])
+    cols.append(idcol)
     # Process the header record to capture column indices and build the output 
     # header record
     for colpref in colprefs:
@@ -81,8 +82,12 @@ parser.add_option("-c", "--csvfile", dest="csvfile",
 parser.add_option("-p", "--colprefs", dest="colprefs",
   help="UKB column prefixes", metavar="FILE")
 
+parser.add_option("-i", "--idcol", dest="idcol",
+  help="Column numbef of id, default 0", metavar="INT")
 
 (options, args) = parser.parse_args()
+if options.idcol == None:
+  options.idcol = "0"
 #
 rec_count = main(options)
 #print "END:", time.time() - start_time, "seconds", rec_count
