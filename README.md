@@ -24,7 +24,7 @@ Matching code is written in Python 2 (2.7 was used for development). Extensive u
 
 The key features to note are;
 
-- Matching is performed using combinations of whole words only (no partial word matches).
+- Matching is performed using combinations of whole words only (no partial word matches) and, in the case of matching synonyms to desscription (Step 01) whole phrase matching is used.
 
 - Synonyms from the ChEMBL database are attached to both 'sides' of the main medication term match, as part of data preparation.
 
