@@ -1,3 +1,4 @@
+2038460150,paracetamol,N02B
 1140868226,aspirin,N02B
 1140871310,ibuprofen,M01A
 1140861958,simvastatin,C10B
@@ -1992,7 +1993,6 @@
 1141157136,dilcardia sr 60mg m/r capsule,C08D
 1141153422,zamadol sr 50mg m/r capsule,N02A
 1141152896,tolcapone,N04B
-1141152366,daktarin dual action 2% cream,D01A
 1141152242,zorac 0.05% aqueous gel,D05A
 1141152198,crinone 4% vaginal gel,G03D
 1141146128,atenolol+co-amilozide,C07A
@@ -2456,7 +2456,6 @@
 1141171002,tobi 300mg/5ml nebuliser solution,R01A
 1141170824,flexin continus 25mg m/r tablet,M01A
 1141170540,strepsils cough lozenge,N02A
-1141170516,daktarin dual action 0.16% powder spray,D01A
 1141170186,doxylar 50mg capsule,J01A
 1141169730,nifopress retard 20mg m/r tablet,C08C
 1141169704,comtess 200mg tablet,N04B
@@ -2933,3 +2932,93 @@
 1140850954,biogastrone 50mg tablet,A02B
 1140850914,eumydrin 0.6% solution,A03B
 1140850746,malinal 500mg/5ml suspension,A02A
+﻿1140923346,co-codamol,N02B
+1140916682,evening primrose oil,D11A
+1140876592,multivitamin+mineral preparations,A11A
+1140923350,co-dydramol,N02B
+1140870788,calcium salts,A12A
+1140865354,gaviscon liquid,A02A
+1140852948,calcium+vitamin d 500units tablet,A11C
+1140882694,betnovate cream,D07A
+1140925800,movicol oral powder,A06A
+1140851812,gtn 400micrograms spray,C01D
+1140865010,viscotears liquid eye gel,S01X
+1197,evening primrose oil product,D11A
+1141180036,fybogel orange s/f granules,A06A
+1141168326,kliovance 1mg/0.5mg tablet,G03F
+1140922804,premique 0.625mg/5mg tablet,G03F
+1140878226,diprobase cream,D02A
+1140922562,femoston 1/10 tablet,G03F
+1140857636,prempak 0.625 tablet,G03F
+1140923336,co-tenidone,C07B
+1140869180,microgynon 30 tablet,G03A
+1141168554,migraleve tablet,N02C
+1140865396,buscopan 10mg tablet,A03D
+1140923402,co-amilofruse,C03E
+1141169520,cosopt 2%/0.5% eye drops,S01E
+1141168752,peptac liquid,A02A
+1140865416,colpermin 0.2ml m/r gel e/c capsule,V03X
+1141176732,carbomers,S01X
+1141172918,celluvisc 1% single-use eye drops,S01X
+1140923348,co-proxamol,N02B
+1140917056,kliofem tablet,G03F
+1140871688,solpadol caplet,N02B
+1140872112,epanutin 25mg capsule,N03A
+1140867504,priadel 200mg m/r tablet,N05A
+1140881882,timoptol 0.25% eye drops,S01E
+1140923276,co-amilozide,C03E
+1141168122,solpadol capsule,N02B
+1140864196,climagest 1mg tablet,G03F
+1141184726,xalacom 0.005%/0.5% eye drops,S01E
+1140882776,fucibet cream,D07C
+1140865414,peppermint oil product,V03X
+1140883968,carmellose,S01X
+1140925978,mycophenolate,L04A
+1140858452,hepacon b12 1mg/1ml injection,B03B
+1140871680,tylex capsule,N02B
+1140881474,normacol granules,A06A
+1140861166,dilzem sr 60mg long acting m/r capsule,C08D
+1140882618,diprosalic ointment,D07C
+1140869324,loestrin 20 tablet,G03A
+1140868458,hormonin tablet,G03F
+1140878324,oilatum cream,D02A
+1140878186,liquifilm tears 1.4% eye drops,S01X
+1140868518,nuvelle tablet,G03F
+1141178052,zapain caplet,N02B
+1140869176,logynon tablet,G03A
+1140926430,climesse tablet,G03F
+1140869346,cilest tablet,G03A
+1140875632,movelat gel,M02A
+1140922806,premique cycle 10mg tablet,G03F
+1140872036,paramax tablet,N02C
+1141172686,coaprovel 150mg/12.5mg tablet,C09D
+1140927320,dermol 500 lotion,D02A
+1140869164,mercilon tablet,G03A
+1140872338,madopar 62.5 capsule,N04B
+1141172436,indivina 1mg/2.5mg tablet,G03F
+1141167206,oestrogel 0.06% gel,G03F
+1140865816,anusol cream,C05A
+1141167848,asasantin retard m/r capsule,B01A
+1140878184,sno-tears eye drops,S01X
+1141168650,solpadeine capsule,N02B
+1140864070,kapake tablet,N02B
+1140882112,co-careldopa,N04B
+1140869162,marvelon tablet,G03A
+1141187304,codipar caplet,N02B
+1140878498,polytar liquid,D05A
+1140888578,antihypertensive,C02A
+1141185986,cetraben emollient cream,D02A
+1140876384,glandosane plain spray,A01A
+1140921088,tridestra tablet,G03F
+1141202030,estradot 25micrograms patch,G03F
+1140864618,zestoretic 10 tablet,C09D
+1141173872,cetraben cream,D02A
+1140875630,movelat cream,M02A
+1140917450,oestrogel 1.25g gel,G03F
+1141153236,oxis 6micrograms turbohaler,R03A
+1141168648,solpadeine tablet,N02B
+1140882374,co-amoxiclav,J01C
+1140865762,regulan 3.6g/sachet powder,A06A
+1140868538,sustanon 100 oily injection,G03B
+1141195836,dermol cream,D02A
+1140878248,oilatum emollient bath additive,D02A

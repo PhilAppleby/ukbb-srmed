@@ -37,6 +37,7 @@ def load_pheno_names(pfile):
 def main(options):
   count = 0
   synonyms = {}
+  ccol = int(options.codecol)
   #codes = {}
 
   try:
@@ -61,8 +62,8 @@ def main(options):
         print "%s\t%s\t%s" % (last_eid, last_eid, "\t".join(phen_array))
       phen_array = ['0'] * len(pcolnames)
       last_eid = data[0]
-    if data[2] in plookup:
-      phen_array[plookup[data[2]]] = '1'
+    if data[ccol] in plookup:
+      phen_array[plookup[data[ccol]]] = '1'
 
   #print "%s,%s,%s" % (last_eid, last_eid, ",".join(phen_array))
   print "%s\t%s\t%s" % (last_eid, last_eid, "\t".join(phen_array))
@@ -76,7 +77,13 @@ parser = OptionParser()
 parser.add_option("-p", "--pfile", dest="pfile",
   help="phenotype code file", metavar="FILE")
 
+parser.add_option("-c", "--codecol", dest="codecol",
+  help="column containing med code", metavar="STR")
+
 (options, args) = parser.parse_args()
+
+if options.codecol == None:
+  options.codecol = "2"
 
 count = main(options)
 #print "END:", time.time() - start_time, "seconds", count
