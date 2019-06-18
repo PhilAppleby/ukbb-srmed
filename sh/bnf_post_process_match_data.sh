@@ -12,7 +12,7 @@ grep ":1," ${BNFDATADIR}/results/bnf_matched.csv > ${BNFDATADIR}/results/bnf_one
 cut -f 1,2,3,5,6 -d ',' ${BNFDATADIR}/results/bnf_one_word_match_full.csv > ${BNFDATADIR}/results/one_word_match_list.csv
 
 # all matched data
-cut -f 1,2,8 -d ',' ${BNFDATADIR}/results/bnf_matched.csv > ${BNFDATADIR}/results/bnf_matched_list.csv
+cut -f 1,2,6 -d ',' ${BNFDATADIR}/results/bnf_matched.csv > ${BNFDATADIR}/results/bnf_matched_list.csv
 sort ${BNFDATADIR}/results/bnf_matched_list.csv > ${BNFDATADIR}/results/bnf_matched_list_sorted.csv
 # looking at missing data 
 cut -f 1,2,8 -d ',' ${BNFDATADIR}/results/bnf_missing.csv > ${BNFDATADIR}/results/bnf_unmatched_list.csv

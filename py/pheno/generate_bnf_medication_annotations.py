@@ -34,7 +34,8 @@ def main(options):
       count += 1
       pheno_string = dh.get_normalised_phrase(code_lookup[data[0]])
       pheno_string = dh.make_pheno_string(pheno_string)
-      data.append(data[0] + "_" + pheno_string)
+      #data.append(data[0] + "_" + pheno_string)
+      data.append(data[0])
       data.append(pheno_string)
       data.append("BINARY")
       print ','.join(data)

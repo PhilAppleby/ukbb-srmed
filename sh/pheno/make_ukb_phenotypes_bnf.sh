@@ -7,7 +7,7 @@ cat ${UKBPDIR}/ukb_20003_with_bnf_codes_matched.csv | \
 # step 2 get the list of possible phenotypes
 echo '.2 extract list of possible phenotype to' ${UKBPDIR}
 cut -f 3 -d ',' ${UKBPDIR}/ukb_20003_with_bnf_codes_matched_sorted.csv | \
-  sort -nu > ${UKBPDIR}/ukb_possible_med_phenotypes_bnf.csv
+  sort -u > ${UKBPDIR}/ukb_possible_med_phenotypes_bnf.csv
 
 # step 3 generate phenotype annotations, get data from the BNF description file
 echo '.3 Get data from bnf desc file, write to' ${UKBPDIR}

@@ -46,7 +46,7 @@ def main(options):
     exit()
 
   # stdin used to read in medications coding data
-  hdr = sys.stdin.readline()
+  #hdr = sys.stdin.readline()
   for line in sys.stdin:
     count += 1
     matched = False

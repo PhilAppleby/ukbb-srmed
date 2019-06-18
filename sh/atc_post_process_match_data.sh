@@ -22,7 +22,7 @@ cut -f 1,2,3,5,6 -d ',' ${ATCDATADIR}/results/atc_one_word_match_full.csv > \
 
 # Following steps extract data for manual examination / intervention
 # all matches
-cut -f 1,2,8 -d ',' ${ATCDATADIR}/results/atc_matched.csv > \
+cut -f 1,2,6 -d ',' ${ATCDATADIR}/results/atc_matched.csv > \
 	${ATCDATADIR}/results/atc_matched_list.csv
 sort ${ATCDATADIR}/results/atc_matched_list.csv > \
 	${ATCDATADIR}/results/atc_matched_list_sorted.csv
