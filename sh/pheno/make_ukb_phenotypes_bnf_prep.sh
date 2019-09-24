@@ -2,13 +2,13 @@
 source ${UKBPROJROOT}/env/common
 # 
 # Just get the matches from the manually edited file
-egrep -vw "UKBB_code|NA" ${BNFDATADIR}/results/bnf_all_manual_matches.csv > \
-  ${BNFDATADIR}/results/bnf_manual_matches.csv
+#egrep -vw "UKBB_code|NA" ${BNFDATADIR}/results/bnf_all_manual_matches.csv > \
+#  ${BNFDATADIR}/results/bnf_manual_matches.csv
 # Cut relevant columns
 #cut -f 1,2,5 -d ',' ${BNFDATADIR}/results/bnf_manual_matches.csv > \
 #  ${BNFDATADIR}/results/bnf_manual_matches_cut.csv
-cut -f 1,2,6 -d ',' ${BNFDATADIR}/results/bnf_matched.csv > \
-  ${BNFDATADIR}/results/bnf_all_matches.csv
+#cut -f 1,2,6 -d ',' ${BNFDATADIR}/results/bnf_matched.csv > \
+#  ${BNFDATADIR}/results/bnf_all_matches.csv
 
 # Combine auto and manually matched codes
 #cat ${BNFDATADIR}/results/bnf_auto_matches_cut.csv \

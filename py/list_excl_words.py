@@ -35,7 +35,7 @@ def main():
       outarray = []
   if len(outarray) > 0:
     print ",".join(outarray)
-  print count
+  #print count
 
   return 
 
