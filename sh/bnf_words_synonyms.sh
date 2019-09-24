@@ -8,5 +8,6 @@ source ${UKBPROJROOT}/env/common
 # Advantages are that it has proprietary names and chem name
 #
 cat ${UDATADIR}/medication_coding_synonyms.csv | python ${PYDIR}/code_data_match.py \
-	--clsfile=${BNFDATADIR}/bnf_combined_synonyms.csv > \
-	${BNFDATADIR}/results/bnf_res.csv
+	--clsfile=${BNFDATADIR}/bnf_combined_synonyms.csv \
+	--multioutput=N \
+	> ${BNFDATADIR}/results/bnf_res.csv
