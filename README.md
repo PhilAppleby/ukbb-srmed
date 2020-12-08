@@ -30,7 +30,7 @@ The key features to note are;
 
 - During testing an excluded word list was built (cf. stop words from Natural Language Processing) to prevent the software from making unwanted one-word matches, as part of an iterative process. 
 
-- All code is intended to be run from a Linix / Unix command line. 
+- All code is intended to be run from a Linux / Unix command line. 
 
 The following subdirectories can be found in the repository:
 
@@ -45,7 +45,7 @@ Top-level scripts are prefixed '01_', '02_', '03_' and '04' for each classificat
 - *data/* Generated match data for both ATC and BNF coding, this does not include manually assigned coding. The excluded words list, which probably should be an independent text file is embedded in ../py/datahelper.py and can be extracted using the .../*py*/list_excl_words.py script. 
 
 ## Running
-Once the environment has been set up (see the note on the .../*env*/common file above), four scripts are run without parameters for either ATC or BNF code assignment through to phenotype genetation (0,1) for PheWAS.
+Once the environment has been set up (see the note on the .../*env*/common file above), four scripts are run, with parameters for either ATC or BNF code assignment, through to phenotype generation (0,1) for PheWAS.
 
 Script '01' runs data preparation steps, note that raw BNF data is not supplied in this repository due to potential licensing requirements. At this point ChEMBL synonyms and, in the case of the ATC-based match, ATC codes and terms are extracted from the ChEMBL database
 
