@@ -44,11 +44,11 @@ def main(options):
     fh = open(options.pfile, "r")
     plookup, pcolnames = load_pheno_names(fh)
   except:
-    print "Failed to open phenotype code file %s" % (options.pfile)
+    print("Failed to open phenotype code file {0}".format(options.pfile))
     sys.exit()
 
   #print "FID,IID,%s" % (",".join(pcolnames))
-  print "FID\tIID\t%s" % ("\t".join(pcolnames))
+  print("FID\tIID\t{0}".format("\t".join(pcolnames)))
   #print len(pcolnames) + 2
 
   last_eid = ""
@@ -59,14 +59,14 @@ def main(options):
     if data[0] != last_eid:
       if last_eid != "":
         #print "%s,%s,%s" % (last_eid, last_eid, ",".join(phen_array))
-        print "%s\t%s\t%s" % (last_eid, last_eid, "\t".join(phen_array))
+        print("{0}\t{1}\t{2}".format(last_eid, last_eid, "\t".join(phen_array)))
       phen_array = ['0'] * len(pcolnames)
       last_eid = data[0]
     if data[ccol] in plookup:
       phen_array[plookup[data[ccol]]] = '1'
 
   #print "%s,%s,%s" % (last_eid, last_eid, ",".join(phen_array))
-  print "%s\t%s\t%s" % (last_eid, last_eid, "\t".join(phen_array))
+  print("{0}\t{1}\t{2}".format(last_eid, last_eid, "\t".join(phen_array)))
   return count
 
 # execution flow starts here

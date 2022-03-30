@@ -24,13 +24,13 @@ def main(options):
     csvfile =  open(options.csvfile, "r")
     csvreader = csv.reader(csvfile)
   except IOError as e:
-    print "I/O error({0}): {1}".format(e.errno, e.strerror)
+    print("I/O error({0}): {1}".format(e.errno, e.strerror))
     exit()
   except TypeError as e:
-    print "Missing arguments ", e
+    print("Missing arguments ", e)
     exit()
   except:
-    print "Unexpected error:", sys.exc_info()
+    print("Unexpected error:", sys.exc_info())
     sys.exit()
 
   colprefs = options.colprefs.split(',')
@@ -52,7 +52,7 @@ def main(options):
           outhdr.append(col)
           #print i, coldata
           cols.append(i)
-    print ",".join(outhdr)
+    print(",".join(outhdr))
     #print cols
     #print len(outhdr)
 
@@ -65,10 +65,10 @@ def main(options):
 #          outrec.append(elem)
       for idx in cols:
         outrec.append(row[idx])
-      print ",".join(outrec)
+      print(",".join(outrec))
   except:
-    print "Unexpected error (2):", sys.exc_info()[0]
-    print sys.exc_info()
+    print("Unexpected error (2):", sys.exc_info()[0])
+    print(sys.exc_info())
     sys.exit()
 
   return count

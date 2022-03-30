@@ -15,13 +15,13 @@ def main():
   codes = []
   count = 0
   hdr = sys.stdin.readline()
-  print "eid,code"
+  print("eid,code")
 
   for line in sys.stdin:
     data = line.strip().split(',')
     for elem in data[1:]:
       if elem != "":
-        print "%s,%s" % (data[0], elem)
+        print("{0},{1}".format(data[0], elem))
 
   return count 
 

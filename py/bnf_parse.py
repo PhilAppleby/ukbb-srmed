@@ -18,7 +18,7 @@ def main():
     data = line.strip().split(',')
     data[0] = dh.format_digit_code(data[0], 3)
     data[1] = data[1].lower()
-    print ','.join(data)
+    print(','.join(data))
 
   return count 
 

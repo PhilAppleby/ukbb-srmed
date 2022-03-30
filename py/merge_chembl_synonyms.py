@@ -43,13 +43,13 @@ def main(options):
     fh = open(options.synfile, "r")
     synonyms = load_synonyms(fh)
   except IOError as e:
-    print "I/O error({0}): {1}".format(e.errno, e.strerror)
+    print("I/O error({0}): {1}".format(e.errno, e.strerror))
     exit()
   except TypeError as e:
-    print "Missing arguments ", e
+    print("Missing arguments ", e)
     exit()
   except:
-    print "Unexpected error:", sys.exc_info()
+    print("Unexpected error:", sys.exc_info())
     exit()
 
   for line in sys.stdin:
@@ -59,12 +59,12 @@ def main(options):
     matched = False
     for key in dh.get_merge_key_list(phrase):
       if key in synonyms:
-        print "%s,%s,%s" % (data[0], phrase, '|'.join(synonyms[key]))
+        print("{0},{1},{2}".format(data[0], phrase, '|'.join(synonyms[key])))
         matched = True
         mcount += 1
         break
     if matched == False:
-      print "%s,%s" % (data[0], phrase)
+      print("{0},{1}".format(data[0], phrase))
 
   return count, mcount
 

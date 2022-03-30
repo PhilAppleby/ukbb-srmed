@@ -29,15 +29,15 @@ def main(options):
     fh = open(options.ukbcfile, "r")
     ukbb_counts = load_count_data(fh)
   except IOError as e:
-    print "I/O error({0}): {1}".format(e.errno, e.strerror)
-    print "I/O error:", sys.exc_info()
+    print("I/O error({0}): {1}".format(e.errno, e.strerror))
+    print("I/O error:", sys.exc_info())
     exit()
   except TypeError as e:
-    print "Missing arguments ", e
+    print("Missing arguments ", e)
     exit()
   except:
     #print "Unexpected error:", sys.exc_info()[0]
-    print "Unexpected error:", sys.exc_info()
+    print("Unexpected error:", sys.exc_info())
     exit()
 
   for line in sys.stdin:
@@ -46,7 +46,7 @@ def main(options):
     if data[1] in ukbb_counts:
       count = ukbb_counts[data[1]]
     data.append(count)
-    print ','.join(data)
+    print(','.join(data))
 
 # execution flow starts here
 #

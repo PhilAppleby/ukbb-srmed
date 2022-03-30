@@ -12,15 +12,15 @@ def main():
   try:
     dh = Datahelper()
   except IOError as e:
-    print "I/O error({0}): {1}".format(e.errno, e.strerror)
-    print "I/O error:", sys.exc_info()
+    print("I/O error({0}): {1}".format(e.errno, e.strerror))
+    print("I/O error:", sys.exc_info())
     exit()
   except TypeError as e:
-    print "Missing arguments ", e
+    print("Missing arguments ", e)
     exit()
   except:
     #print "Unexpected error:", sys.exc_info()[0]
-    print "Unexpected error:", sys.exc_info()
+    print("Unexpected error:", sys.exc_info())
     exit()
 
   ewords = dh.get_excluded_words()
@@ -31,10 +31,10 @@ def main():
     count += 1
     outarray.append(wd)
     if count % 4 == 0:
-      print ",".join(outarray)
+      print(",".join(outarray))
       outarray = []
   if len(outarray) > 0:
-    print ",".join(outarray)
+    print(",".join(outarray))
   #print count
 
   return 

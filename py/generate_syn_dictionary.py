@@ -37,7 +37,7 @@ def main():
           synonyms[syn].append(other_syn)
 
   for syn in sorted(synonyms):
-    print "%s\t%s" % (syn, '|'.join(set(synonyms[syn])))
+    print("{0}\t{1}".format(syn, '|'.join(set(synonyms[syn]))))
     count += 1
   return count
 

@@ -20,7 +20,7 @@ def main(options):
     fh = open(options.bnfcodes, "r")
     code_lookup = load_code_list(fh)
   except:
-    print "Unexpected error:", sys.exc_info()
+    print("Unexpected error:", sys.exc_info())
     exit()
 
   print "pheno,PHENOTYPE,Category,type"
@@ -38,7 +38,7 @@ def main(options):
       data.append(data[0])
       data.append(pheno_string)
       data.append("BINARY")
-      print ','.join(data)
+      print(','.join(data))
 
   return count
 

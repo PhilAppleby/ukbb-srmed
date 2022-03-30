@@ -34,15 +34,15 @@ def main(options):
     dcount = dh.load_cls_phrases(fh)
     #print "Dictionary size = %d" % (dcount)
   except IOError as e:
-    print "I/O error({0}): {1}".format(e.errno, e.strerror)
-    print "I/O error:", sys.exc_info()
+    print("I/O error({0}): {1}".format(e.errno, e.strerror))
+    print("I/O error:", sys.exc_info())
     exit()
   except TypeError as e:
-    print "Missing arguments ", e
+    print("Missing arguments ", e)
     exit()
   except:
     #print "Unexpected error:", sys.exc_info()[0]
-    print "Unexpected error:", sys.exc_info()
+    print("Unexpected error:", sys.exc_info())
     exit()
 
   # stdin used to read in medications coding data
@@ -62,12 +62,12 @@ def main(options):
         # Current policy: output one line per code match (can be multiple per input record
         for code_elem in code_array:
           code_data = code_elem.split("~")
-          print "%s,%s,%s,%s,%s,%s,%d" % (data[0], data[1], last_match, '|'.join(match_data), code_data[1], code_data[0], len(code_array))
+          print("{0},{1},{2},{3},{4},{5},{6}".format(data[0], data[1], last_match, '|'.join(match_data), code_data[1], code_data[0], len(code_array)))
       else:
-        print "%s,%s,%s,%s,%s,%s,%d" % (data[0], data[1], last_match, '|'.join(match_data), 0, selected_code, len(code_array))
+        print("{0},{1},{2},{3},{4},{5},{6}".format(data[0], data[1], last_match, '|'.join(match_data), 0, selected_code, len(code_array)))
       match_count += 1
     else:      
-      print "%s,%s,%s,%s,%s,%s,0" % (data[0], data[1], last_match, '|'.join(match_data), "NA", "NA")
+      print("{0},{1},{2},{3},{4},{5},{6}".format(data[0], data[1], last_match, '|'.join(match_data), "NA", "NA", 0))
       miss_count += 1
 
   return count, match_count, miss_count 
@@ -76,7 +76,7 @@ def main(options):
 # execution flow starts here
 #
 parser = OptionParser()
-parser.add_option("-b", "--clsfile", dest="clsfile",
+parser.add_option("-c", "--clsfile", dest="clsfile",
   help="file contains input classification system codes and descriptions", metavar="FILE")
 parser.add_option("-m", "--multioutput", dest="multioutput",
   help="output multiple classification codes per source system line", metavar="STR")

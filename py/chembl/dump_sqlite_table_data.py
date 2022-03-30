@@ -13,16 +13,16 @@ def main(options):
     chembl.text_factory = str
   except:
     #print "Unexpected error:", sys.exc_info()[0]
-    print "Unexpected error:", sys.exc_info()
+    print("Unexpected error:", sys.exc_info())
     exit()
   
-  query = "select * from %s" % (options.tablename)
+  query = "select * from {0}".format(options.tablename)
 
   if options.where_clause != None:
-    query += " %s" % (options.where_clause)
+    query += " {0}".format(options.where_clause)
   
   if options.limit != None:
-    query += " limit %s" % (options.limit)
+    query += " limit {0}".format(options.limit)
 
   count = 0
   
@@ -30,7 +30,7 @@ def main(options):
   cursor.execute(query)
   for row in cursor:
     count += 1
-    print '\t'.join([str(elem) for elem in row])
+    print('\t'.join([str(elem) for elem in row]))
 
   chembl.close()
 

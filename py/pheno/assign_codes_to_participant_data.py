@@ -33,18 +33,18 @@ def main(options):
     code_lookup = load_cs_codes(fh)
     #print len(synonyms)
   except IOError as e:
-    print "I/O error({0}): {1}".format(e.errno, e.strerror)
+    print("I/O error({0}): {1}".format(e.errno, e.strerror))
     exit()
   except TypeError as e:
-    print "Missing arguments ", e
+    print("Missing arguments ", e)
     exit()
   except:
     #print "Unexpected error:", sys.exc_info()[0]
-    print "Unexpected error:", sys.exc_info()
+    print("Unexpected error:", sys.exc_info())
     exit()
 
   hdr = sys.stdin.readline().strip()
-  print "%s,%s" % (hdr, "cs_code")
+  print("{0},{1}".format(hdr, "cs_code"))
 
   for line in sys.stdin:
     count += 1
@@ -54,10 +54,10 @@ def main(options):
       for code in code_lookup[data[1]]:
         data[-1] = code
         match_count += 1
-        print ",".join(data)
+        print(",".join(data))
     else:
       miss_count += 1
-      print ",".join(data)
+      print(",".join(data))
 
   return count, match_count, miss_count
 

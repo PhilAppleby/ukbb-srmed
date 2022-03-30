@@ -27,7 +27,7 @@ def main(options):
   for line in sys.stdin:
     data = line.strip().split(',')
     atc_code = data[0]
-    query = "select level%d_description from atc_classification where level%d = '%s' limit 1" % (level, level, atc_code)
+    query = "select level{0}_description from atc_classification where level{1} = '{2}' limit 1".format(level, level, atc_code)
     count = 0
   
     cursor = chembl.cursor()

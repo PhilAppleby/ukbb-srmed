@@ -15,7 +15,7 @@ def main(options):
     data = line.strip().split('\t')
     data[0] = dh.format_atc_code(data[0], int(options.codelen))
     data[1] = dh.get_normalised_phrase(data[1]).lower()
-    print ','.join(data)
+    print(','.join(data))
 # End main()
 
 # execution flow starts here

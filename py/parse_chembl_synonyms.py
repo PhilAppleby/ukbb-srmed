@@ -30,7 +30,7 @@ def main():
   for line in sys.stdin:
     data = line.strip().split('\t')
     if data[0] != last_molno and last_molno != "":
-      print '|'.join(related_synonyms) + "|MOLREGNO:" + last_molno
+      print('|'.join(related_synonyms) + "|MOLREGNO:" + last_molno)
       related_synonyms = []
     last_molno = data[0]
     text = dh.get_normalised_phrase(data[1])
@@ -40,7 +40,7 @@ def main():
       related_synonyms.append(syn)
 
   # output the last synonym group
-  print '|'.join(related_synonyms) + "|MOLREGNO:" + last_molno
+  print('|'.join(related_synonyms) + "|MOLREGNO:" + last_molno)
 
 # execution flow starts here
 #
