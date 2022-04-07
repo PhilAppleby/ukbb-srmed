@@ -20,7 +20,7 @@ There is no structure in the data and no means of grouping medication into categ
 Write and test software to match terms in the UK Biobank Self Reported Medication data coding table with terms in both the Anatomical Therapeutic Chemical (ATC) classification system and in the British National Formulary (BNF) coding system. The overall aim being to assign higher level well-known codes to allow grouping of the data. The resulting matched data can then be used in conjuction with the UKBB medication codes assigned at assessment time to generate evidence for use in both individual clinical phenotypes and in ranges of clincal phenotypes as found in Phenome-Wide association studies (PheWAS).
 
 ## Description
-Matching code is written in Python 2 (2.7 was intially used for development, changes for Python 3 have now been made). Extensive use of Bash shell wrappers is made to supply context at run time - code and data directory locations, data file names and database access parameters. 
+Matching code is written in Python (2.7 was initially used for development, changes for Python 3 have now been made). Extensive use of Bash shell wrappers is made to supply context at run time - code and data directory locations, data file names and database access parameters. 
 
 The key features to note are;
 
