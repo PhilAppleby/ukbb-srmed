@@ -11,7 +11,7 @@ def main():
   count = 0
   dh = Datahelper()
   hdr = sys.stdin.readline().strip()
-  print hdr
+  print(hdr)
 
   for line in sys.stdin:
     count += 1

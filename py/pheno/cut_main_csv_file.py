@@ -39,7 +39,7 @@ def main(options):
   outhdr = []
 
   try:
-    hdr = csvreader.next()
+    hdr = next(csvreader)
     #print len(hdr)
     outhdr.append(hdr[idcol])
     cols.append(idcol)

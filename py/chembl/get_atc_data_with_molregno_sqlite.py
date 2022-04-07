@@ -16,7 +16,7 @@ def main():
     chembl = sqlite3.connect(os.environ["CHFILE"])
     chembl.text_factory = str
   except:
-    print "Unexpected error:", sys.exc_info()
+    print("Unexpected error:", sys.exc_info())
     exit()
 
   query = """select atc.who_name, atc.level5, matc.molregno, atc.level4_description 
@@ -27,7 +27,7 @@ def main():
   cursor = chembl.cursor()
   cursor.execute(query)
   for row in cursor:
-    print '\t'.join([str(elem) for elem in row])
+    print('\t'.join([str(elem) for elem in row]))
 
   chembl.close()
   # main() ends

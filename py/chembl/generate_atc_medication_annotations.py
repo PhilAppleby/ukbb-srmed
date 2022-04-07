@@ -21,7 +21,7 @@ def main(options):
     print("Unexpected error:", sys.exc_info())
     exit()
 
-  print "pheno,PHENOTYPE,Category,type"
+  print("pheno,PHENOTYPE,Category,type")
 
   count = 0
   for line in sys.stdin:
@@ -39,7 +39,7 @@ def main(options):
       data.append(data[0] + "_" + pheno_string)
       data.append(pheno_string)
       data.append("BINARY")
-      print ','.join(data)
+      print(','.join(data))
 
   chembl.close()
   return count

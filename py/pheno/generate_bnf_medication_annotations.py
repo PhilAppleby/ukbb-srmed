@@ -23,7 +23,7 @@ def main(options):
     print("Unexpected error:", sys.exc_info())
     exit()
 
-  print "pheno,PHENOTYPE,Category,type"
+  print("pheno,PHENOTYPE,Category,type")
 
   count = 0
   for line in sys.stdin:

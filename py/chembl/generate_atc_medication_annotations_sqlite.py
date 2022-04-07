@@ -18,10 +18,10 @@ def main(options):
     chembl.text_factory = str
   except:
     #print "Unexpected error:", sys.exc_info()[0]
-    print "Unexpected error:", sys.exc_info()
+    print("Unexpected error:", sys.exc_info())
     exit()
 
-  print "pheno,PHENOTYPE,Category,type"
+  print("pheno,PHENOTYPE,Category,type")
 
   count = 0
   for line in sys.stdin:
@@ -39,7 +39,7 @@ def main(options):
       data.append(data[0] + "_" + pheno_string)
       data.append(pheno_string)
       data.append("BINARY")
-      print ','.join(data)
+      print(','.join(data))
 
   chembl.close()
   return count

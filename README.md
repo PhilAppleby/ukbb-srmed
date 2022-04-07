@@ -20,7 +20,7 @@ There is no structure in the data and no means of grouping medication into categ
 Write and test software to match terms in the UK Biobank Self Reported Medication data coding table with terms in both the Anatomical Therapeutic Chemical (ATC) classification system and in the British National Formulary (BNF) coding system. The overall aim being to assign higher level well-known codes to allow grouping of the data. The resulting matched data can then be used in conjuction with the UKBB medication codes assigned at assessment time to generate evidence for use in both individual clinical phenotypes and in ranges of clincal phenotypes as found in Phenome-Wide association studies (PheWAS).
 
 ## Description
-Matching code is written in Python 2 (2.7 was used for development). Extensive use of Bash shell wrappers is made to supply context at run time - code and data directory locations, data file names and database access parameters. 
+Matching code is written in Python 2 (2.7 was intially used for development, changes for Python 3 have now been made). Extensive use of Bash shell wrappers is made to supply context at run time - code and data directory locations, data file names and database access parameters. 
 
 The key features to note are;
 
@@ -36,7 +36,7 @@ The following subdirectories can be found in the repository:
 
 - *env/* Environment variables used are shown in a single file 'common_tplt', users should complete these and copy to a file named 'common', users must also pre-define the **PROJDATA** and **PROJROOT** environment variables as these are used as roots to data and code directory trees. Parameters for local chembl database access are also required for drug synonym extraction and ATC code extraction. The code example supplied is for the sqlite edition of the chembl database which can be found at: [The ChEMBL site, download section](https://www.ebi.ac.uk/chembl), the project used version 23, which is no longer the latest version at the time of writing. Downloads for other DBMS's are available.
 
-- *py/* Python scripts, scripts to match synonyms prior to matching across coding systems. Also included is the module 'datahelper.py' which is where the text matching code is to be found. There are two lower level directories where scripts to extract and format ChEMBL data and to process phenotype data reaide.
+- *py/* Python scripts, scripts to match synonyms prior to matching across coding systems. Also included is the module 'datahelper.py' which is where the text matching code is to be found. There are two lower level directories where scripts to extract and format ChEMBL data and to process phenotype data reside.
 
 - *sh/* Bash shell scripts, wrappers for the python code split into several main functions and provided for coding against the ATC and BNF classification systems.
 

@@ -8,5 +8,5 @@ if [[ $# -ne 2 ]] ; then
     exit 1
 fi
 echo ${UKBBPHENODIR}/${UKBBPHENOFILE}
-echo "Cut cols: write to ${UKBPDIR}"
+echo "Cut cols: write to ${UKBPDIR} (ukb_${2}_${1}.csv)"
 python ${PYDIR}/pheno/cut_main_csv_file.py --csvfile=${UKBBPHENODIR}/${UKBBPHENOFILE} --colprefs=${2} > ${UKBPDIR}/ukb_${2}_${1}.csv
